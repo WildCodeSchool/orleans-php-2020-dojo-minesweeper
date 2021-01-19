@@ -1,0 +1,27 @@
+.error {
+    background-color: rgb(224, 157, 157);
+    color: red;
+    padding:8px;
+    margin: 8px;
+}
+
+.minesweeper {
+    display: grid;
+    grid-template-columns: repeat(var(--size), 20px);
+    grid-template-rows: repeat(var(--size), 20px);
+}
+
+.minesweeper a {
+    width: 100%;
+    height: 100%;
+    background-color: darkslategrey;
+    border:1px solid black;
+}
+
+.minesweeper a:hover {
+    background-color: darkslategrey;
+}
+
+.hidden {
+    background-color: grey;
+}

@@ -1,7 +1,8 @@
 {
     "name": "sylvain/mine-sweeper",
     "require": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "twig/twig": "^3.2"
     },
     "authors": [
         {
