@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineSweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mine Sweeper</h1>
+    <a href="?reset=1">New game</a>
+    <div>{{error}}</div>
+    <div style="--sizeX: {{ mineSweeper.tiles.0|length }}; --sizeY: {{ mineSweeper.tiles|length }}" class="tiles">
+        {% for y in 0 .. mineSweeper.tiles|length -1 %}
+            {% for x in 0 .. mineSweeper.tiles.0|length -1 %}
+                <a href="?x={{x}}&y={{y}}">
+                {% if mineSweeper.tiles[y][x] != 0 and  mineSweeper.tiles[y][x] != constant('App\\MineSweeper::BOMB') %}
+                    {{ mineSweeper.tiles[y][x]}}
+                {% endif %}
+                </a>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</body>
+</html>
